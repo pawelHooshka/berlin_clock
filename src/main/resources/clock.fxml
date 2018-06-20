@@ -5,7 +5,7 @@
 
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="296.0" prefWidth="258.0" xmlns="http://javafx.com/javafx/10.0.1"
-      fx:controller="com.phuszcza.ClockController" xmlns:fx="http://javafx.com/fxml/1">
+      stylesheets="@styles/clock.css" fx:controller="com.phuszcza.ClockController" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label id="secondsBlinker" fx:id="secondsBlinker" layoutX="107.0" layoutY="7.0" prefHeight="47.0" prefWidth="50.0" style="-fx-background-color: grey;" />
       <Label id="fiveHour1" fx:id="fiveHour1" layoutX="14.0" layoutY="62.0" prefHeight="47.0" prefWidth="50.0" style="-fx-background-color: grey;" />
