@@ -3,11 +3,9 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.Pane?>
 
-
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="296.0" prefWidth="258.0" xmlns="http://javafx.com/javafx/10.0.1"
-      stylesheets="@styles/clock.css" fx:controller="com.phuszcza.ClockController" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="296.0" prefWidth="251.0" stylesheets="@styles/clock.css" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.phuszcza.ClockController">
    <children>
-      <Label id="secondsBlinker" fx:id="secondsBlinker" layoutX="107.0" layoutY="7.0" prefHeight="47.0" prefWidth="50.0" style="-fx-background-color: grey;" />
+      <Label id="secondsBlinker" fx:id="secondsBlinker" layoutX="102.0" layoutY="7.0" prefHeight="47.0" prefWidth="50.0" style="-fx-background-color: grey;" />
       <Label id="fiveHour1" fx:id="fiveHour1" layoutX="14.0" layoutY="62.0" prefHeight="47.0" prefWidth="50.0" style="-fx-background-color: grey;" />
       <Label id="fiveHour2" fx:id="fiveHour2" layoutX="72.0" layoutY="62.0" prefHeight="47.0" prefWidth="50.0" style="-fx-background-color: grey;" />
       <Label id="fiveHour3" fx:id="fiveHour3" layoutX="130.0" layoutY="62.0" prefHeight="47.0" prefWidth="50.0" style="-fx-background-color: grey;" />
