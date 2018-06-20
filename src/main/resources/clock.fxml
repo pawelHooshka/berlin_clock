@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="296.0" prefWidth="258.0" xmlns="http://javafx.com/javafx/10.0.1"
+      fx:controller="com.phuszcza.ClockController" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label id="secondsBlinker" fx:id="secondsBlinker" layoutX="107.0" layoutY="7.0" prefHeight="47.0" prefWidth="50.0" style="-fx-background-color: grey;" />
+      <Label id="fiveHour1" fx:id="fiveHour1" layoutX="14.0" layoutY="62.0" prefHeight="47.0" prefWidth="50.0" style="-fx-background-color: grey;" />
+      <Label id="fiveHour2" fx:id="fiveHour2" layoutX="72.0" layoutY="62.0" prefHeight="47.0" prefWidth="50.0" style="-fx-background-color: grey;" />
+      <Label id="fiveHour3" fx:id="fiveHour3" layoutX="130.0" layoutY="62.0" prefHeight="47.0" prefWidth="50.0" style="-fx-background-color: grey;" />
+      <Label id="fiveHour4" fx:id="fiveHour4" layoutX="189.0" layoutY="62.0" prefHeight="47.0" prefWidth="50.0" style="-fx-background-color: grey;" />
+      <Label id="oneHour1" fx:id="oneHour1" layoutX="14.0" layoutY="118.0" prefHeight="47.0" prefWidth="50.0" style="-fx-background-color: grey;" />
+      <Label id="oneHour2" fx:id="oneHour2" layoutX="73.0" layoutY="118.0" prefHeight="47.0" prefWidth="50.0" style="-fx-background-color: grey;" />
+      <Label id="oneHour3" fx:id="oneHour3" layoutX="133.0" layoutY="118.0" prefHeight="47.0" prefWidth="50.0" style="-fx-background-color: grey;" />
+      <Label id="oneHour4" fx:id="oneHour4" layoutX="190.0" layoutY="118.0" prefHeight="47.0" prefWidth="50.0" style="-fx-background-color: grey;" />
+      <Label fx:id="fiveMinute1" layoutX="14.0" layoutY="173.0" prefHeight="39.0" prefWidth="14.0" style="-fx-background-color: grey;" styleClass="fiveMinute1" />
+      <Label fx:id="fiveMinute2" layoutX="34.0" layoutY="173.0" prefHeight="39.0" prefWidth="14.0" style="-fx-background-color: grey;" styleClass="fiveMinute2" />
+      <Label fx:id="fiveMinute3" layoutX="56.0" layoutY="173.0" prefHeight="39.0" prefWidth="14.0" style="-fx-background-color: grey;" styleClass="fiveMinute3" />
+      <Label fx:id="fiveMinute4" layoutX="77.0" layoutY="173.0" prefHeight="39.0" prefWidth="14.0" style="-fx-background-color: grey;" styleClass="fiveMinute4" />
+      <Label fx:id="fiveMinute5" layoutX="99.0" layoutY="173.0" prefHeight="39.0" prefWidth="14.0" style="-fx-background-color: grey;" styleClass="fiveMinute5" />
+      <Label fx:id="fiveMinute6" layoutX="123.0" layoutY="173.0" prefHeight="39.0" prefWidth="14.0" style="-fx-background-color: grey;" styleClass="fiveMinute6" />
+      <Label fx:id="fiveMinute7" layoutX="144.0" layoutY="173.0" prefHeight="39.0" prefWidth="14.0" style="-fx-background-color: grey;" styleClass="fiveMinute7" />
+      <Label fx:id="fiveMinute8" layoutX="166.0" layoutY="173.0" prefHeight="39.0" prefWidth="14.0" style="-fx-background-color: grey;" styleClass="fiveMinute8" />
+      <Label fx:id="fiveMinute9" layoutX="187.0" layoutY="173.0" prefHeight="39.0" prefWidth="14.0" style="-fx-background-color: grey;" styleClass="fiveMinute9" />
+      <Label fx:id="fiveMinute10" layoutX="228.0" layoutY="173.0" prefHeight="39.0" prefWidth="14.0" style="-fx-background-color: grey;" styleClass="fiveMinute10" />
+      <Label fx:id="fiveMinute11" layoutX="208.0" layoutY="173.0" prefHeight="39.0" prefWidth="14.0" style="-fx-background-color: grey;" styleClass="fiveMinute11" />
+      <Label id="oneMinute1" fx:id="oneMinute1" layoutX="14.0" layoutY="221.0" prefHeight="47.0" prefWidth="50.0" style="-fx-background-color: grey;" />
+      <Label id="oneMinute2" fx:id="oneMinute2" layoutX="73.0" layoutY="221.0" prefHeight="47.0" prefWidth="50.0" style="-fx-background-color: grey;" />
+      <Label id="oneMinute3" fx:id="oneMinute3" layoutX="133.0" layoutY="221.0" prefHeight="47.0" prefWidth="50.0" style="-fx-background-color: grey;" />
+      <Label id="oneMinute4" fx:id="oneMinute4" layoutX="192.0" layoutY="221.0" prefHeight="47.0" prefWidth="50.0" style="-fx-background-color: grey;" />
+   </children>
+</Pane>
