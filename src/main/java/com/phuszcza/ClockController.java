@@ -1,11 +1,15 @@
 package com.phuszcza;
 
 import com.phuszcza.data.Clock;
-import com.phuszcza.data.Styles;
+
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
 public class ClockController {
+
+    public static final String RED_BACKGROUND = "-fx-background-color: red;";
+    public static final String YELLOW_BACKGROUND = "-fx-background-color: yellow;";
+    public static final String OFF_BACKGROUND = "-fx-background-color: grey;";
 
     //-- HOURS --//
     @FXML private Label fiveHour1;
@@ -71,9 +75,9 @@ public class ClockController {
 
     private void updateBlinker(Integer seconds) {
         if (seconds != null && seconds % 2 == 0) {
-            secondsBlinker.setStyle(Styles.YELLOW_BACKGROUND);
+            secondsBlinker.setStyle(YELLOW_BACKGROUND);
         } else if (seconds != null && seconds % 2 != 0) {
-            secondsBlinker.setStyle(Styles.OFF_BACKGROUND);
+            secondsBlinker.setStyle(OFF_BACKGROUND);
         }
     }
 
@@ -82,7 +86,7 @@ public class ClockController {
             int fiveMinuteIntervals = minutes / 5;
             int singleMinutes = minutes - (fiveMinuteIntervals * 5);
             colourFiveMinutes(fiveMinutesIntervalLabels, fiveMinuteIntervals);
-            colourLabels(oneMinuteIntervalLabels, Styles.YELLOW_BACKGROUND, 0, singleMinutes);
+            colourLabels(oneMinuteIntervalLabels, YELLOW_BACKGROUND, 0, singleMinutes);
         }
     }
 
@@ -90,19 +94,19 @@ public class ClockController {
         if (hours != null) {
             int fiveHoursIntervals = hours / 5;
             int singleHours = hours - (fiveHoursIntervals * 5);
-            colourLabels(hourLabels, Styles.RED_BACKGROUND, 0, fiveHoursIntervals);
-            colourLabels(hourLabels, Styles.RED_BACKGROUND, 4, singleHours);
+            colourLabels(hourLabels, RED_BACKGROUND, 0, fiveHoursIntervals);
+            colourLabels(hourLabels, RED_BACKGROUND, 4, singleHours);
         }
     }
 
     private void colourFiveMinutes(Label[] fiveMinutesIntervalLabels, int updateOnLength) {
         for (int i = 0; i < fiveMinutesIntervalLabels.length; i++) {
             if (i < updateOnLength && (i + 1) % 3 != 0) {
-                fiveMinutesIntervalLabels[i].setStyle(Styles.YELLOW_BACKGROUND);
+                fiveMinutesIntervalLabels[i].setStyle(YELLOW_BACKGROUND);
             } else if (i < updateOnLength && (i + 1) % 3 == 0) {
-                fiveMinutesIntervalLabels[i].setStyle(Styles.RED_BACKGROUND);
+                fiveMinutesIntervalLabels[i].setStyle(RED_BACKGROUND);
             } else {
-                fiveMinutesIntervalLabels[i].setStyle(Styles.OFF_BACKGROUND);
+                fiveMinutesIntervalLabels[i].setStyle(OFF_BACKGROUND);
             }
         }
     }
@@ -112,7 +116,7 @@ public class ClockController {
             if (i < length + start) {
                 labels[i].setStyle(onStyle);
             } else {
-                labels[i].setStyle(Styles.OFF_BACKGROUND);
+                labels[i].setStyle(OFF_BACKGROUND);
             }
         }
     }

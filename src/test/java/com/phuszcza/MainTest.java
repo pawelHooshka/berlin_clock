@@ -12,7 +12,6 @@ import javafx.stage.Stage;
 
 import com.phuszcza.data.Clock;
 import com.phuszcza.data.ClockTest;
-import com.phuszcza.data.Styles;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -71,32 +70,32 @@ public class MainTest extends ApplicationTest {
 
     @Test
     public void testBlinkerSecondsOdd() {
-        assertStyle(GuiTest.find(BLINKER), Styles.OFF_BACKGROUND);
+        assertStyle(GuiTest.find(BLINKER), ClockController.OFF_BACKGROUND);
 
         LocalDateTime localDateTime = getTime(10, 30, 5);
         ClockTest.updateClock(localDateTime, clock);
 
-        assertStyle(GuiTest.find(BLINKER), Styles.OFF_BACKGROUND);
+        assertStyle(GuiTest.find(BLINKER), ClockController.OFF_BACKGROUND);
     }
 
     @Test
     public void testBlinkerBlinks() {
-        assertStyle(GuiTest.find(BLINKER), Styles.OFF_BACKGROUND);
+        assertStyle(GuiTest.find(BLINKER), ClockController.OFF_BACKGROUND);
 
         LocalDateTime localDateTime = getTime(10, 30, 4);
         ClockTest.updateClock(localDateTime, clock);
 
-        assertStyle(GuiTest.find(BLINKER), Styles.YELLOW_BACKGROUND);
+        assertStyle(GuiTest.find(BLINKER), ClockController.YELLOW_BACKGROUND);
 
         localDateTime = getTime(10, 30, 5);
         ClockTest.updateClock(localDateTime, clock);
 
-        assertStyle(GuiTest.find(BLINKER), Styles.OFF_BACKGROUND);
+        assertStyle(GuiTest.find(BLINKER), ClockController.OFF_BACKGROUND);
 
         localDateTime = getTime(10, 30, 6);
         ClockTest.updateClock(localDateTime, clock);
 
-        assertStyle(GuiTest.find(BLINKER), Styles.YELLOW_BACKGROUND);
+        assertStyle(GuiTest.find(BLINKER), ClockController.YELLOW_BACKGROUND);
     }
 
     @Test
@@ -104,34 +103,34 @@ public class MainTest extends ApplicationTest {
         Label[] fiveMinuteIntervalLabels = getFiveMinuteIntervalLabes();
         Label[] oneMinuteIntervalLabels = getOneMinuteIntervalLabes();
 
-        assertStyle(fiveMinuteIntervalLabels, Styles.OFF_BACKGROUND);
-        assertStyle(oneMinuteIntervalLabels, Styles.OFF_BACKGROUND);
+        assertStyle(fiveMinuteIntervalLabels, ClockController.OFF_BACKGROUND);
+        assertStyle(oneMinuteIntervalLabels, ClockController.OFF_BACKGROUND);
 
         LocalDateTime localDateTime = getTime(10, 30, 5);
         ClockTest.updateClock(localDateTime, clock);
 
-        assertStyle(fiveMinuteIntervalLabels, Styles.YELLOW_BACKGROUND, Styles.YELLOW_BACKGROUND, Styles.RED_BACKGROUND,
-                Styles.YELLOW_BACKGROUND, Styles.YELLOW_BACKGROUND, Styles.RED_BACKGROUND,
-                Styles.OFF_BACKGROUND, Styles.OFF_BACKGROUND, Styles.OFF_BACKGROUND, Styles.OFF_BACKGROUND, Styles.OFF_BACKGROUND);
-        assertStyle(oneMinuteIntervalLabels, Styles.OFF_BACKGROUND);
+        assertStyle(fiveMinuteIntervalLabels, ClockController.YELLOW_BACKGROUND, ClockController.YELLOW_BACKGROUND, ClockController.RED_BACKGROUND,
+                ClockController.YELLOW_BACKGROUND, ClockController.YELLOW_BACKGROUND, ClockController.RED_BACKGROUND,
+                ClockController.OFF_BACKGROUND, ClockController.OFF_BACKGROUND, ClockController.OFF_BACKGROUND, ClockController.OFF_BACKGROUND, ClockController.OFF_BACKGROUND);
+        assertStyle(oneMinuteIntervalLabels, ClockController.OFF_BACKGROUND);
 
         localDateTime = getTime(10, 31, 5);
         ClockTest.updateClock(localDateTime, clock);
 
-        assertStyle(fiveMinuteIntervalLabels, Styles.YELLOW_BACKGROUND, Styles.YELLOW_BACKGROUND, Styles.RED_BACKGROUND,
-                Styles.YELLOW_BACKGROUND, Styles.YELLOW_BACKGROUND, Styles.RED_BACKGROUND,
-                Styles.OFF_BACKGROUND, Styles.OFF_BACKGROUND, Styles.OFF_BACKGROUND, Styles.OFF_BACKGROUND, Styles.OFF_BACKGROUND);
-        assertStyle(oneMinuteIntervalLabels, Styles.YELLOW_BACKGROUND,
-                Styles.OFF_BACKGROUND, Styles.OFF_BACKGROUND, Styles.OFF_BACKGROUND);
+        assertStyle(fiveMinuteIntervalLabels, ClockController.YELLOW_BACKGROUND, ClockController.YELLOW_BACKGROUND, ClockController.RED_BACKGROUND,
+                ClockController.YELLOW_BACKGROUND, ClockController.YELLOW_BACKGROUND, ClockController.RED_BACKGROUND,
+                ClockController.OFF_BACKGROUND, ClockController.OFF_BACKGROUND, ClockController.OFF_BACKGROUND, ClockController.OFF_BACKGROUND, ClockController.OFF_BACKGROUND);
+        assertStyle(oneMinuteIntervalLabels, ClockController.YELLOW_BACKGROUND,
+                ClockController.OFF_BACKGROUND, ClockController.OFF_BACKGROUND, ClockController.OFF_BACKGROUND);
 
         localDateTime = getTime(10, 32, 5);
         ClockTest.updateClock(localDateTime, clock);
 
-        assertStyle(fiveMinuteIntervalLabels, Styles.YELLOW_BACKGROUND, Styles.YELLOW_BACKGROUND, Styles.RED_BACKGROUND,
-                Styles.YELLOW_BACKGROUND, Styles.YELLOW_BACKGROUND, Styles.RED_BACKGROUND,
-                Styles.OFF_BACKGROUND, Styles.OFF_BACKGROUND, Styles.OFF_BACKGROUND, Styles.OFF_BACKGROUND, Styles.OFF_BACKGROUND);
-        assertStyle(oneMinuteIntervalLabels, Styles.YELLOW_BACKGROUND, Styles.YELLOW_BACKGROUND,
-                Styles.OFF_BACKGROUND, Styles.OFF_BACKGROUND);
+        assertStyle(fiveMinuteIntervalLabels, ClockController.YELLOW_BACKGROUND, ClockController.YELLOW_BACKGROUND, ClockController.RED_BACKGROUND,
+                ClockController.YELLOW_BACKGROUND, ClockController.YELLOW_BACKGROUND, ClockController.RED_BACKGROUND,
+                ClockController.OFF_BACKGROUND, ClockController.OFF_BACKGROUND, ClockController.OFF_BACKGROUND, ClockController.OFF_BACKGROUND, ClockController.OFF_BACKGROUND);
+        assertStyle(oneMinuteIntervalLabels, ClockController.YELLOW_BACKGROUND, ClockController.YELLOW_BACKGROUND,
+                ClockController.OFF_BACKGROUND, ClockController.OFF_BACKGROUND);
     }
 
     @Test
@@ -139,23 +138,23 @@ public class MainTest extends ApplicationTest {
         Label[] fiveHourIntervalLabels = getFiveHourIntervalLabels();
         Label[] oneHourIntervalLabels = getOneHourIntervalLabels();
 
-        assertStyle(fiveHourIntervalLabels, Styles.OFF_BACKGROUND);
-        assertStyle(oneHourIntervalLabels, Styles.OFF_BACKGROUND);
+        assertStyle(fiveHourIntervalLabels, ClockController.OFF_BACKGROUND);
+        assertStyle(oneHourIntervalLabels, ClockController.OFF_BACKGROUND);
 
         LocalDateTime localDateTime = getTime(10, 30, 5);
         ClockTest.updateClock(localDateTime, clock);
 
-        assertStyle(fiveHourIntervalLabels, Styles.RED_BACKGROUND, Styles.RED_BACKGROUND, Styles.OFF_BACKGROUND,
-                Styles.OFF_BACKGROUND);
-        assertStyle(oneHourIntervalLabels, Styles.OFF_BACKGROUND);
+        assertStyle(fiveHourIntervalLabels, ClockController.RED_BACKGROUND, ClockController.RED_BACKGROUND, ClockController.OFF_BACKGROUND,
+                ClockController.OFF_BACKGROUND);
+        assertStyle(oneHourIntervalLabels, ClockController.OFF_BACKGROUND);
 
         localDateTime = getTime(11, 30, 5);
         ClockTest.updateClock(localDateTime, clock);
 
-        assertStyle(fiveHourIntervalLabels, Styles.RED_BACKGROUND, Styles.RED_BACKGROUND, Styles.OFF_BACKGROUND,
-                Styles.OFF_BACKGROUND);
-        assertStyle(oneHourIntervalLabels, Styles.RED_BACKGROUND, Styles.OFF_BACKGROUND, Styles.OFF_BACKGROUND,
-                Styles.OFF_BACKGROUND);
+        assertStyle(fiveHourIntervalLabels, ClockController.RED_BACKGROUND, ClockController.RED_BACKGROUND, ClockController.OFF_BACKGROUND,
+                ClockController.OFF_BACKGROUND);
+        assertStyle(oneHourIntervalLabels, ClockController.RED_BACKGROUND, ClockController.OFF_BACKGROUND, ClockController.OFF_BACKGROUND,
+                ClockController.OFF_BACKGROUND);
     }
 
     private LocalDateTime getTime(int hour, int minute, int second) {
